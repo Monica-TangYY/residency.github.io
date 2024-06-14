@@ -246,7 +246,7 @@ p {
 
 .data-source p {
   text-align: right;
-  color: #FFFFFE;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 #wordcloud-info {
@@ -268,13 +268,6 @@ p {
   top: 105%;
 }
 
-#guipeibao-info {
-  font-size: 0.75em;
-  line-height: 1.5em;
-  width: 70%;
-  top: 95%;
-
-}
 
 .content-light {
   background-color: rgba(255, 255, 255, 0.8);
@@ -286,6 +279,18 @@ p {
 
 .content-light p {
   color: #000000;
+}
+
+#guipeibao-info {
+  font-size: 0.75em;
+  line-height: 1.5em;
+  width: 70%;
+  top: 95%;
+}
+
+#guipeibao-info p,
+#institution-data-source p {
+  color: gray;
 }
 
 #section5 {
