@@ -430,20 +430,20 @@
     </div>
     <div id="oneday">
       <div class="hint" id="hint4">
-        （拖动滑杆查看不同时间段情况；点击按钮切换工作日类型）
+        （点击按钮切换工作日类型，拖动滑杆可查看不同时间段情况）
       </div>
       <p id="oneday-text">
         这是规培生再普通不过的一天。
       </p>
       <div id="oneday-chart" class="chart avatar-invisible-trigger">
-        <div class="value">TIME</div>
-
         <div class="container">
           <!-- 滑杆 ;以1作为步长，增加时间-->
           <input type="range" id="bingbing" min="0" max="24" value="0" step="1" oninput="updateTime(this.value)">
           <input type="range" id="gaoyu" min="0" max="24" value="0" step="1" oninput="updateTime(this.value)">
           <input type="range" id="zhujingping" min="0" max="24" value="0" step="1" oninput="updateTime(this.value)">
-
+          <div id="value-box">
+            <div class="value">TIME</div>
+          </div>
           <div class="button">
             <button onclick="showSlider('bingbing'); buttonPressed(this)">饼饼-常规日</button>
             <button onclick="showSlider('gaoyu'); buttonPressed(this)">高雨-手术日</button>
@@ -616,11 +616,16 @@
         因此，
         <span>在中国建立规培制度，就是希望更多的中国普通百姓都能遇到“靠谱”的医生</span>。
       </p>
-      <div class="chart">
+      <div class="chart" style="margin: 100px auto;">
         <div class="chart-title chart-title-black">
           中国医疗机构各层级数量占比
         </div>
         <img src="./image/treemap.png" alt="" id="treechart" class="chart">
+        <div class="data-source" id="institution-data-source">
+          <p>
+            数据来源：《2022年我国卫生健康事业发展统计公报》
+          </p>
+        </div>
       </div>
 
       <p>
