@@ -1,0 +1,120 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:700);
+
+.container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  flex-direction: inherit;
+  /* background-color: purple; */
+}
+
+.value {
+  border-bottom: 4px dashed #bdc3c7;
+  color: #FFFFFE;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 50px;
+  letter-spacing: -0.07em;
+  text-shadow: #c37373 2px 2px 2px;
+  position: relative;
+  top: 0;
+  left: 40%;
+}
+
+input[type="range"] {
+  display: none;
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 450px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+  writing-mode: bt-lr;
+  /* 设置滑杆为从上到下 */
+  transform: rotate(90deg);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 20;
+}
+
+#bingbing {
+  display: block;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #c37373;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: white;
+  border: 2px solid #c37373;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.3);
+}
+
+#map {
+  width: 100%;
+  height: 80vh;
+  /* border: 3px solid #c37373; */
+  /* background-color: palegreen; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#map svg {
+  /* border: 1px solid #000; */
+  /* background-color: burlywood; */
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#map svg image {
+  transform: scale(1.5) translateX(150px) translateY(-30px);
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-right: 50px;
+  position: absolute;
+  /* background-color: aqua; */
+  top: 30%;
+  left: 7%;
+  z-index: 20;
+
+}
+
+.button button {
+  margin-bottom: 10px;
+  border-radius: 6px;
+  color: #112030;
+}
+
+.button-pressed {
+  border-radius: 6px;
+  box-shadow: 0 0.3px 0.7px rgba(255, 255, 255, 0.126), 0 0.9px 1.7px rgba(0, 0, 0, 0.179), 0 1.8px 3.5px rgba(0, 0, 0, 0.224), 0 3.7px 7.3px rgba(0, 0, 0, 0.277), 0 10px 20px rgba(0, 0, 0, 0.4);
+  background-color: #c37373;
+}
