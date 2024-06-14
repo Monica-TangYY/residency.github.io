@@ -1,14 +1,3 @@
-// 函数用于显示指定的滑杆，并隐藏其他滑杆
-function showSlider(sliderId) {
-  var sliders = document.querySelectorAll("input[type=range]"); // 获取所有的滑杆元素
-  sliders.forEach(function (slider) {
-    if (slider.id === sliderId) {
-      slider.style.display = "block";
-    } else {
-      slider.style.display = "none";
-    }
-  });
-}
 function buttonPressed(button) {
   var buttons = document.querySelectorAll(".button button");
   buttons.forEach(function (btn) {
@@ -16,10 +5,13 @@ function buttonPressed(button) {
   });
   button.classList.add("button-pressed");
 }
-// 创建SVG画布
+
 const svg = d3.select("#map").append("svg")
-  .attr("width", 800)
-  .attr("height", 400);
+  .attr('viewBox', '0 0 800 400')
+  .attr("preserveAspectRatio", "xMidYMid meet") // Preserve aspect ratio
+  .attr("width", "100%") // Make it responsive
+  .attr("height", "100%");
+
 const backgroundImage = svg.append("image")
   .attr("xlink:href", "img/room.png")
   .attr("x", -100)
